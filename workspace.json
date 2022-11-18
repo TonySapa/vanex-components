@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "components": "libs/components",
+    "components-e2e": "apps/components-e2e",
+    "vanex-components": "apps/vanex-components",
+    "vanex-components-e2e": "apps/vanex-components-e2e"
+  }
+}

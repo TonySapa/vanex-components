@@ -1,0 +1,28 @@
+{
+  "root": "apps/vanex-components-e2e",
+  "sourceRoot": "apps/vanex-components-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/vanex-components-e2e/cypress.json",
+        "devServerTarget": "vanex-components:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "vanex-components:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/vanex-components-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["vanex-components"]
+}
